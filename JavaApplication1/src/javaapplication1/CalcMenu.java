@@ -18,7 +18,9 @@ public class CalcMenu {
         if(symbol.equals("-")==true){
                 return calculadora.restarDosNumeros(number1, number2);
             }
-            
+        if(symbol.equals("*")==true){
+                return calculadora.multiplicarDosNumeros(number1,number2);
+        }
             
             return -1;
         }

@@ -29,6 +29,13 @@ public class CalcTest {
     public void TestResta(){
         assertEquals(-3,CalcMenu.doOperation(2,5,"-"),0);
     }
+    
+    @Test
+    public void TestMultiplicacion(){
+        assertEquals(10,CalcMenu.doOperation(2,5,"*"),0);
+    }
+    
+    
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
     //

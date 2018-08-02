@@ -17,4 +17,8 @@ public class Calc {
     public int restarDosNumeros(int number1, int number2) {
         return number1-number2;
     }
+
+    public int multiplicarDosNumeros(int number1, int number2) {
+        return number1*number2;
+    }
 }
