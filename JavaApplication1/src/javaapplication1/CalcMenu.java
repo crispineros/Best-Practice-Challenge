@@ -11,9 +11,11 @@ import javaapplication1.Calc;
 */
 public class CalcMenu {
     public static double doOperation(int number1,int number2,String symbol){
-            if(symbol.equals("+")==true){
-                return number1+number2;
+        Calc calculadora=new Calc();    
+        if(symbol.equals("+")==true){
+                return calculadora.sumarDosNumeros(number1, number2);
             }
+            
             
             return -1;
         }
