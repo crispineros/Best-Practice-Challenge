@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package javaapplication1;
 
 /**
@@ -10,19 +5,19 @@ package javaapplication1;
  * @author cpineros
  */
 public class Calc {
-    public double sumarDosNumeros(double number1,double number2){
+    public double addTwoNumbers(double number1,double number2){
         return number1+number2;
     } 
 
-    public double restarDosNumeros(double number1, double number2) {
+    public double SubstractTwoNumbers(double number1, double number2) {
         return number1-number2;
     }
 
-    public double multiplicarDosNumeros(double number1, double number2) {
+    public double multiplyTwoNumbers(double number1, double number2) {
         return number1*number2;
     }
 
-    public double dividirDosNumeros(double number1, double number2) {
+    public double divideTwoNumbers(double number1, double number2) {
         return number1/number2;
     }
 }
