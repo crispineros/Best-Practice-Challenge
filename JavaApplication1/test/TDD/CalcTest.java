@@ -24,7 +24,11 @@ public class CalcTest {
     public void TestSuma(){
         assertEquals(7,CalcMenu.doOperation(2,5,"+"),0);
     }
-
+    
+    @Test
+    public void TestResta(){
+        assertEquals(-3,CalcMenu.doOperation(2,5,"-"),0);
+    }
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
     //

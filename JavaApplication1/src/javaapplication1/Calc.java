@@ -10,7 +10,11 @@ package javaapplication1;
  * @author cpineros
  */
 public class Calc {
-    public int sumarDosNumeros(int x,int y){
-        return x+y;
+    public int sumarDosNumeros(int number1,int number2){
+        return number1+number2;
     } 
+
+    public int restarDosNumeros(int number1, int number2) {
+        return number1-number2;
+    }
 }
