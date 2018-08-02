@@ -35,6 +35,11 @@ public class CalcTest {
         assertEquals(10,CalcMenu.doOperation(2,5,"*"),0);
     }
     
+    @Test
+    public void TestDivision(){
+        assertEquals(0.4,CalcMenu.doOperation(2,5,"/"),0);
+    }
+    
     
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
