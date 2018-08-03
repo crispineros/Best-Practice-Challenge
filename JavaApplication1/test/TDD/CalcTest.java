@@ -2,6 +2,7 @@ package TDD;
 
 import javaapplication1.Calc;
 import javaapplication1.CalcMenu;
+import javaapplication1.TurnOnCalc;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Assert;
@@ -16,6 +17,7 @@ import static org.junit.Assert.*;
  */
 public class CalcTest {
     Calc calculator=new Calc();
+    TurnOnCalc menu=new TurnOnCalc();
     
     @Test
     public void AddTest(){
@@ -48,4 +50,8 @@ public class CalcTest {
         assertEquals(0,calculator.divideTwoNumbers(2,0),0);
     }
     
+    @Test
+    public void TestMenu1(){
+        assertNotNull(menu);
+    }
 }

@@ -20,12 +20,12 @@ public class Log {
         return logString;
     }
     
-    public String buildLogLine(double number1,double number2,double number3,String operation){
-        return String.valueOf(number1)+" "+operation+" "+String.valueOf(number2)+" = "+String.valueOf(number3)+"\n";
+    public String buildLogLine(double number1,double number2,double number3,String operation,String validation){
+        return validation+" :"+String.valueOf(number1)+" "+operation+" "+String.valueOf(number2)+" = "+String.valueOf(number3)+"\n";
     }
 
-    public void builtAndAddLogLine(double number1, double number2, double number3, String operation) {
-        String logline=buildLogLine(number1, number2, number3, operation);
+    public void builtAndAddLogLine(double number1, double number2, double number3, String operation,String validation) {
+        String logline=buildLogLine(number1, number2, number3, operation,validation);
         addToLog(logline);
     }
 }

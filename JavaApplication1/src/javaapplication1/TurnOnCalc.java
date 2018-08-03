@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package javaapplication1;
 
 import java.util.Scanner;
@@ -11,7 +6,7 @@ import java.util.Scanner;
  *
  * @author cpineros
  */
-class TurnOnCalc {
+public class TurnOnCalc {
     Calc calculator=new Calc();
     public void runMenu() {
         int op=-1;
@@ -74,7 +69,15 @@ class TurnOnCalc {
     public void callCalc(double number1, double number2, int operation) {
         if(operation==1){
             System.out.println(calculator.addTwoNumbers(number1, number2));
-            
+        }
+        if(operation==2){
+            System.out.println(calculator.SubstractTwoNumbers(number1, number2));
+        }
+        if(operation==3){
+            System.out.println(calculator.multiplyTwoNumbers(number1, number2));
+        }
+        if(operation==4){
+            System.out.println(calculator.divideTwoNumbers(number1, number2));
         }
     }
     
