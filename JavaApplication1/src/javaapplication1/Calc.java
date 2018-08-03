@@ -37,7 +37,7 @@ public class Calc {
     }
 
     public String printLog() {
-        
+        System.out.println(log.getLogString());
         return log.getLogString();
     }
 
