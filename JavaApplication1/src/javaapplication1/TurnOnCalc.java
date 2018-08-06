@@ -30,8 +30,11 @@ public class TurnOnCalc {
 
     public int getOption() {
         Scanner input= new Scanner(System.in);
-        int option=input.nextInt();
-        return option;
+        if(input.hasNextInt()){
+            int option=input.nextInt();
+            return option;
+        }
+        return 6; 
     }
 
     public void executeCommand(int op) {
@@ -41,26 +44,38 @@ public class TurnOnCalc {
         else if(op==5){
             calculator.printLog();
         }
+        else{
+            System.out.println("opcion invalida");
+        }
         
     }
 
     public double getNumber() {
+        double number=Double.POSITIVE_INFINITY;
         Scanner input= new Scanner(System.in);
-        double number=input.nextInt();
-        return number;
+        if(input.hasNextInt()){
+            number=input.nextInt();
+            return number;
+        }
+        return number ;
     }
 
     public void doOperation(int operation) {
-            double number1=this.getNumber(1);
-            double number2=this.getNumber(2);
-            this.callCalc(number1,number2,operation);
+            double number1=this.requestAndGetNumber(1);
+            double number2=this.requestAndGetNumber(2);
+            if(this.validateNumber(number1)==true && this.validateNumber(number2)==true){
+                this.callCalc(number1,number2,operation);
+            }
+            else{
+                System.out.println("Numeros digitados invalidos, intente de nuevo por favor:");
+            }
     }
 
     public void printNumberRequest(int number) {
         System.out.println("Please digit number "+number+" :");
     }
 
-    public double getNumber(int numberOfNumber) {
+    public double requestAndGetNumber(int numberOfNumber) {
         this.printNumberRequest(numberOfNumber);
         double number=this.getNumber();
         return number;
@@ -78,6 +93,15 @@ public class TurnOnCalc {
         }
         if(operation==4){
             System.out.println(calculator.divideTwoNumbers(number1, number2));
+        }
+    }
+
+    public boolean validateNumber(double number) {
+        if(number!=Double.POSITIVE_INFINITY){
+            return true;
+        }
+        else{
+            return false;
         }
     }
     

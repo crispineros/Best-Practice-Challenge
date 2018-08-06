@@ -22,6 +22,7 @@ public class CalcTest {
     @Test
     public void AddTest(){
         assertEquals(7,calculator.addTwoNumbers(2,5),0);
+        assertEquals(7.5,calculator.addTwoNumbers(2,5.5),0);
     }
     
     /*@Test
