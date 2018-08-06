@@ -25,11 +25,11 @@ public class CalcTest {
         assertEquals(7.5,calculator.addTwoNumbers(2,5.5),0);
     }
     
-    /*@Test
+    @Test
     public void LogTest(){
         assertEquals(7,calculator.addTwoNumbers(2,5),0);
-        assertEquals("2.0 + 5.0 = 7.0\n",calculator.printLog());
-    }*/
+        assertEquals("valid :2.0 + 5.0 = 7.0\n",calculator.printLog());
+    }
     
     @Test
     public void SubstractTest(){

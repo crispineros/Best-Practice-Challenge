@@ -15,7 +15,7 @@ public class Log {
     public String getLogString(){
         String logString="";
         for (int i=0;i<loglist.size();i++){
-            logString=logString+loglist.get(i)+"\n";
+            logString=logString+loglist.get(i);
         }
         return logString;
     }
