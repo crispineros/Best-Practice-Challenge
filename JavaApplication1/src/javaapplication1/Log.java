@@ -1,6 +1,7 @@
 package javaapplication1;
 
 import java.util.ArrayList;
+import java.util.logging.Logger;
 
 /**
  *
@@ -14,8 +15,59 @@ public class Log {
     
     public String getLogString(){
         String logString="";
+        logString=this.orderLogString();
+        return logString;
+    }
+    
+    public String orderLogString(){
+        String logString="";
+        logString=logString+this.orderLogStringBySum();
+        logString=logString+this.orderLogStringBySub();
+        logString=logString+this.orderLogStringByMult();
+        logString=logString+this.orderLogStringByDiv();
+        return logString;
+    }
+    
+    public String orderLogStringBySum(){
+        String logString="";
+        logString=logString+"ADDITIONS: \n";
         for (int i=0;i<loglist.size();i++){
-            logString=logString+loglist.get(i);
+            if(loglist.get(i).contains("+")){
+                logString=logString+loglist.get(i);
+            }
+        }
+        return logString;
+    }
+    
+    public String orderLogStringBySub(){
+        String logString="";
+        logString=logString+"SUBSTRACTIONS: \n";
+        for (int i=0;i<loglist.size();i++){
+            if(loglist.get(i).contains("-")){
+                logString=logString+loglist.get(i);
+            }
+        }
+        return logString;
+    }
+    
+    public String orderLogStringByMult(){
+        String logString="";
+        logString=logString+"MULTIPLICATIONS: \n";
+        for (int i=0;i<loglist.size();i++){
+            if(loglist.get(i).contains("*")){
+                logString=logString+loglist.get(i);
+            }
+        }
+        return logString;
+    }
+    
+    public String orderLogStringByDiv(){
+        String logString="";
+        logString=logString+"DIVISIONS: \n";
+        for (int i=0;i<loglist.size();i++){
+            if(loglist.get(i).contains("/")){
+                logString=logString+loglist.get(i);
+            }
         }
         return logString;
     }
